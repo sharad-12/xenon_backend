@@ -4,7 +4,9 @@ const cookieParser = require('cookie-parser');
 const path = require('path');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin:["https://xenon-frontend-lake.vercel.app/"]
+}));
 
 
 app.use(express.json());
